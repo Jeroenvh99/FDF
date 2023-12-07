@@ -21,7 +21,7 @@ $(NAME): $(OBJS)
 	$(MAKE) -j -C ./libft add_bonus
 	cmake -S ./MLX42 -B ./MLX42/build
 	cmake --build ./MLX42/build -j4
-	cc $(OBJS) $(CFLAGS) ./libft/libft.a ./MLX42/build/libmlx42.a -Iinclude -ldl -lglfw -pthread -lmd -o $(NAME)
+	cc $(OBJS) $(CFLAGS) ./libft/libft.a ./MLX42/build/libmlx42.a -Iinclude -ldl -lglfw -pthread -lmd -lm -o $(NAME)
 
 clean:
 	$(MAKE) -j -C ./libft fclean
